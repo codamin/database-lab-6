@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import UserEntity from '../db/entity/user.entity';
-import CreateUserDto from './dto/create-user.dto';
+import { CreateUserDto } from './dto/create-user.dto';
 import BookEntity from '../db/entity/book.entity';
 import {getConnection} from "typeorm";
 
 @Injectable()
-export class UserServices {
+export class UserService {
 
   async insert(userDetails: CreateUserDto): Promise<UserEntity> {
     const userEntity: UserEntity = UserEntity.create();
