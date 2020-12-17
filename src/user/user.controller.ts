@@ -8,7 +8,7 @@ export class UserController {
   constructor(private readonly usersServices: UserService) {}
 
 //'postUser()' will handle the creating of new User
-  @Post('create')
+  @Post('add')
   @ApiResponse({status: 200, description: 'Create user'})
   @Header('Content-Type', 'application/json')
   postUser( @Body() user: CreateUserDto) {
