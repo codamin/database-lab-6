@@ -7,7 +7,6 @@ export class CreateUserDto {
     default: 'DefaultUserName', maxLength:20})
     readonly name: string;
 
-
     @ApiProperty({description: 'Enter Books Name > ', default: []})
     readonly books: number[];
 }

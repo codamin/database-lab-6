@@ -15,7 +15,7 @@ export class UserService {
     await UserEntity.save(userEntity);
     return userEntity;
   }
-  
+
   async getAllUsers(): Promise<UserEntity[]> {
     return await UserEntity.find();
   }
