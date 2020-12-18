@@ -10,8 +10,6 @@ export class AdminUsersController {
     constructor(private readonly adminUserSerivices: AdminUsersService) {}
 
     @Post('add')
-    @ApiBearerAuth()
-    @UseGuards(JwtAuthGuard)
     @ApiResponse({status: 200, description: 'Create admin'})
     @Header('Content-Type', 'application/json')
     postUser( @Body() user: CreateAdminDto) {
