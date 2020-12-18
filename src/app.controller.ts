@@ -4,7 +4,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { LocalAuthGuard } from './auth/local-auth.guard';
 import { AuthService } from './auth/auth.service';
 import { JwtAuthGuard } from './auth/jwt-auth.guard';
-
+import {ApiResponse, ApiBearerAuth, ApiQuery} from '@nestjs/swagger';
 
 @Controller()
 export class AppController {
@@ -17,6 +17,7 @@ export class AppController {
   }
 
   @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth()
   @Get('profile')
   getProfile(@Request() req) {
     return req.user;
