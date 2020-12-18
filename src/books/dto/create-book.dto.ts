@@ -10,7 +10,7 @@ export default class CreateBookDto {
     default: 'DefaultUserID', maxLength:12})
     readonly userID: number;
 
-    @ApiProperty({description: 'Enter Array of Genre ID > ', minLength: 8,
-    default: [], maxLength:12})
+    @ApiProperty({description: 'Enter Array of Genre IDs > ',
+    default: []})
     readonly genreIDs: number[];
 }
