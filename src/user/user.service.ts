@@ -11,6 +11,7 @@ export class UserService {
     const userEntity: UserEntity = UserEntity.create();
     const {name } = userDetails;
     userEntity.name = name;
+    
     await UserEntity.save(userEntity);
     return userEntity;
   }
